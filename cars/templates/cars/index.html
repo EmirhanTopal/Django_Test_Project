@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+	All Cars
+{% endblock %}
+
+{% block css_files %}
+	<link rel="stylesheet" href="{% static "/cars/cars.css" %}">
+{% endblock %}
+
+{% block content %}
+	{% include "../includes/header.html" %}
+	<ul>
+		{% for car in cars %}
+			<li><a href="{% url "all-cars" car %}">{{ car|title}}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

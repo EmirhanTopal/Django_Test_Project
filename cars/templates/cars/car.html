@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    {{ render_title|title }}
+{% endblock %}
+
+{% block content %}
+
+    {% include "../includes/header.html" %}
+    {% if render_text is not None %}
+        <h1>{{ render_text }}</h1>
+    {% else %}
+        <h1>Text not founded</h1>
+    <h1>{{ render_title }}</h1> b
+    {% endif %}
+{% endblock %}
